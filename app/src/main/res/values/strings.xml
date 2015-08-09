@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Traylz Mix</string>
+    <string name="app_name">Trail Mix</string>
     /* Starting Menu */
     <string name="start_button">Start Mapping!</string>
     <string name="find_button">Find Other Trails</string>
