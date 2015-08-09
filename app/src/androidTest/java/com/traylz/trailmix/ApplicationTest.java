@@ -1,4 +1,4 @@
-package com.traylz.traylzmix;
+package com.traylz.trailmix;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

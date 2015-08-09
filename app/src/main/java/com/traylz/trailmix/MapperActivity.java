@@ -1,4 +1,4 @@
-package com.traylz.traylzmix;
+package com.traylz.trailmix;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,8 +21,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-import static com.traylz.traylzmix.CoordArray.dist;
-import static com.traylz.traylzmix.CoordArray.testArray;
+import static com.traylz.trailmix.CoordArray.dist;
+import static com.traylz.trailmix.CoordArray.testArray;
 
 public class MapperActivity extends FragmentActivity
         implements OnMapReadyCallback, LocationListener {

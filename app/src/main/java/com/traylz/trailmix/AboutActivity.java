@@ -1,25 +1,28 @@
-package com.traylz.traylzmix;
+package com.traylz.trailmix;
 
-import android.media.MediaPlayer;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 
-public class NaniSoreActivity extends AppCompatActivity {
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("Nani sore?!?");
-        setContentView(R.layout.activity_nani_sore);
+        setTitle("About Traylz Mix");
+        setContentView(R.layout.activity_about);
+        WebView wv = (WebView) findViewById(R.id.aboutWebView);
+        wv.loadUrl("http://traylz.x10host.com/about.php");
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_nani_sore, menu);
+        getMenuInflater().inflate(R.menu.menu_about, menu);
         return true;
     }
 
@@ -38,7 +41,14 @@ public class NaniSoreActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void nanisore(View view) {
-        MediaPlayer.create(getApplicationContext(), R.raw.nanisore).start();
+    private int countdown = 5;
+
+    public void nani(View view) {
+        countdown--;
+        if (countdown <= 0) {
+            countdown = 5;
+            Intent intent = new Intent(this, NaniSoreActivity.class);
+            startActivity(intent);
+        }
     }
 }

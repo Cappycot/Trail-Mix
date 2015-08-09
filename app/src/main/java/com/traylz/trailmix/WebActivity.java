@@ -1,44 +1,27 @@
-package com.traylz.traylzmix;
+package com.traylz.trailmix;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.webkit.WebView;
 
-public class MainActivity extends AppCompatActivity {
+public class WebActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("Traylz Mix");
-        setContentView(R.layout.activity_main);
-    }
-
-    /**
-     * My sh*tty methods below.
-     */
-    public void startTrailing(View view) {
-        Intent intent = new Intent(this, MapperActivity.class);
-        CoordArray.testArray.clear();
-        startActivity(intent);
-    }
-
-    public void findTrails(View view) {
-        Intent intent = new Intent(this, WebActivity.class);
-        startActivity(intent);
-    }
-
-    public void seeAbout(View view) {
-        Intent intent = new Intent(this, AboutActivity.class);
-        startActivity(intent);
+        setTitle("Trail Route List");
+        setContentView(R.layout.activity_web);
+        WebView wv = (WebView) findViewById(R.id.webView);
+        wv.getSettings().setJavaScriptEnabled(true);
+        wv.loadUrl("http://traylz.x10host.com/ListTrails.php");
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_web, menu);
         return true;
     }
 

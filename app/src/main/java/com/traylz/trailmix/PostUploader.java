@@ -1,4 +1,4 @@
-package com.traylz.traylzmix;
+package com.traylz.trailmix;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -49,8 +49,8 @@ public class PostUploader {
             System.out.println(responseCode);
 
             BufferedReader in = new BufferedReader(new InputStreamReader((connection.getInputStream())));
-            String msg = null;
-            StringBuffer response = new StringBuffer();
+            String msg;
+            StringBuilder response = new StringBuilder();
 
             while ((msg = in.readLine()) != null) {
                 response.append(msg);

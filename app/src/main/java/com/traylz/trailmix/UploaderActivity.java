@@ -1,4 +1,4 @@
-package com.traylz.traylzmix;
+package com.traylz.trailmix;
 
 import android.content.Context;
 import android.content.Intent;
