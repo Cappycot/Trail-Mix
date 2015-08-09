@@ -1,13 +1,11 @@
 package com.traylz.traylzmix;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,11 +33,6 @@ public class MainActivity extends AppCompatActivity {
     public void seeAbout(View view) {
         Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
-    }
-
-    public void toastShit(String msg, boolean length) {
-        Context context = getApplicationContext();
-        Toast.makeText(context, msg, length ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT).show();
     }
 
     @Override
