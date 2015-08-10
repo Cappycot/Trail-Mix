@@ -52,10 +52,6 @@
             android:name="com.traylz.trailmix.AboutActivity"
             android:label="@string/title_activity_about" >
         </activity>
-        <activity
-            android:name="com.traylz.trailmix.NaniSoreActivity"
-            android:label="@string/title_activity_nani_sore" >
-        </activity>
     </application>
 
 </manifest>

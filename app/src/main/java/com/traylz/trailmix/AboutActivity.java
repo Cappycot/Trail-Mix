@@ -1,11 +1,9 @@
 package com.traylz.trailmix;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.webkit.WebView;
 
 public class AboutActivity extends AppCompatActivity {
@@ -39,16 +37,5 @@ public class AboutActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    private int countdown = 100;
-
-    public void nani(View view) {
-        countdown--;
-        if (countdown <= 0) {
-            countdown = 100;
-            Intent intent = new Intent(this, NaniSoreActivity.class);
-            startActivity(intent);
-        }
     }
 }
